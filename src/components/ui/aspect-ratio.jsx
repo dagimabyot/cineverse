@@ -1,6 +1,5 @@
-// aspect-ratio.jsx - placeholder component
-import React from 'react';
+import * as AspectRatioPrimitive from "@radix-ui/react-aspect-ratio"
 
-const aspect-ratio = () => { return <div>aspect-ratio.jsx works!</div>; };
+const AspectRatio = AspectRatioPrimitive.Root
 
-export default aspect-ratio;
+export { AspectRatio }

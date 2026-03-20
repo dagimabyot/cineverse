@@ -1,6 +1,8 @@
-// main.jsx - placeholder component
-import React from 'react';
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from '@/App.jsx'
+import '@/index.css'
 
-const main = () => { return <div>main.jsx works!</div>; };
-
-export default main;
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <App />
+)

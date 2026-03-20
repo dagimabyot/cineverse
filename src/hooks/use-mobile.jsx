@@ -1,6 +1,19 @@
-// use-mobile.jsx - placeholder component
-import React from 'react';
+import * as React from "react"
 
-const use-mobile = () => { return <div>use-mobile.jsx works!</div>; };
+const MOBILE_BREAKPOINT = 768
 
-export default use-mobile;
+export function useIsMobile() {
+  const [isMobile, setIsMobile] = React.useState(undefined)
+
+  React.useEffect(() => {
+    const mql = window.matchMedia(`(max-width: ${MOBILE_BREAKPOINT - 1}px)`)
+    const onChange = () => {
+      setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+    }
+    mql.addEventListener("change", onChange)
+    setIsMobile(window.innerWidth < MOBILE_BREAKPOINT)
+    return () => mql.removeEventListener("change", onChange);
+  }, [])
+
+  return !!isMobile
+}

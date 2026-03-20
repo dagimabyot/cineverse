@@ -1,6 +1,29 @@
-// sonner.jsx - placeholder component
-import React from 'react';
+"use client";
+import { useTheme } from "next-themes"
+import { Toaster as Sonner } from "sonner"
 
-const sonner = () => { return <div>sonner.jsx works!</div>; };
+const Toaster = ({
+  ...props
+}) => {
+  const { theme = "system" } = useTheme()
 
-export default sonner;
+  return (
+    (<Sonner
+      theme={theme}
+      className="toaster group"
+      toastOptions={{
+        classNames: {
+          toast:
+            "group toast group-[.toaster]:bg-background group-[.toaster]:text-foreground group-[.toaster]:border-border group-[.toaster]:shadow-lg",
+          description: "group-[.toast]:text-muted-foreground",
+          actionButton:
+            "group-[.toast]:bg-primary group-[.toast]:text-primary-foreground",
+          cancelButton:
+            "group-[.toast]:bg-muted group-[.toast]:text-muted-foreground",
+        },
+      }}
+      {...props} />)
+  );
+}
+
+export { Toaster }
