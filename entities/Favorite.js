@@ -1,0 +1,1 @@
+// Favorite.js - placeholder file
