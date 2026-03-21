@@ -7,7 +7,7 @@ const ALLOWED = [
 ];
 
 const BLOCKED = [
-  'Adult / Erotic content', 'Nudity or partial nudity',
+  'Adult content', 'Nudity or partial nudity',
   'Sexual scenes or romantic intimacy', 'Suggestive or explicit imagery',
   'R-rated & NC-17 content', 'Explicit language or mature references',
 ];
