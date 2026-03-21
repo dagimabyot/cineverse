@@ -29,4 +29,4 @@ For support, visit our GitHub repository or contact us through our social channe
 
 ---
 
-Powered by [The Movie Database (TMDB)](https://www.themoviedb.org)
+Powered by CineVerse
