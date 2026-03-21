@@ -49,7 +49,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-950">
-      <HeroCarousel movies={bannerMovies} />
+      <div className="pt-16">
+        <HeroCarousel movies={bannerMovies} />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12">
         <MovieGrid title="⭐ Popular Now" movies={popular} loading={loading} />
         <MovieGrid title="🏆 Top Rated" movies={topRated} loading={loading} />
