@@ -5,7 +5,7 @@ import { tmdb, imgUrl } from '../components/tmdb';
 import MovieGrid from '../components/movies/MovieGrid';
 import RatingStars from '../components/movies/RatingStars';
 import TrailerModal from '../components/movies/TrailerModal';
-import WatchlistFavButton from '../components/movies/WatchlistFavButton';
+import WatchlistFavButton from '../components/movies/WatchlistFavB';
 import ReviewSection from '../components/movies/ReviewSection';
 import { base44 } from '@/api/base44Client';
 
