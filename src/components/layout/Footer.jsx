@@ -1,4 +1,4 @@
-import { Clapperboard, Github, Twitter, Instagram, Shield } from 'lucide-react';
+import { Clapperboard, Github, Linkedin, Send, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -24,9 +24,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3 text-sm">Follow Us</h4>
             <div className="flex gap-3 mb-4">
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Github className="w-4 h-4" /></a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Twitter className="w-4 h-4" /></a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Instagram className="w-4 h-4" /></a>
+              <a href="https://github.com/dagimabyot/cineverse" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Github className="w-4 h-4" /></a>
+              <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Linkedin className="w-4 h-4" /></a>
+              <a href="https://t.me/dagiabyot" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Send className="w-4 h-4" /></a>
             </div>
             <p className="text-gray-600 text-xs">© {new Date().getFullYear()} CineVerse. All rights reserved.</p>
           </div>
@@ -35,9 +35,7 @@ export default function Footer() {
         <span>© {new Date().getFullYear()} CineVerse — Discover, track, and enjoy cinema.</span>
         <div className="flex items-center gap-4">
           <span className="flex items-center gap-1 text-green-600"><Shield className="w-3 h-3" /> Family-Safe Content</span>
-          <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer" className="hover:text-gray-400 transition-colors">
-            Powered by TMDB
-          </a>
+          <span>Powered by CineVerse</span>
           <Link to="/Readme" className="hover:text-gray-400 transition-colors">Docs</Link>
         </div>
         </div>
