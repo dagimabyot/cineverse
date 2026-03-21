@@ -1,4 +1,4 @@
-// base44Client.js - placeholder file
+
 import { createClient } from '@base44/sdk';
 import { appParams } from '@/lib/app-params';
 
