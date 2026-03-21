@@ -1,4 +1,4 @@
-import { Clapperboard, Github, Twitter, Instagram, Shield } from 'lucide-react';
+import { Clapperboard, Github, Linkedin, MessageCircle, Shield } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -24,9 +24,9 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-3 text-sm">Follow Us</h4>
             <div className="flex gap-3 mb-4">
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Github className="w-4 h-4" /></a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Twitter className="w-4 h-4" /></a>
-              <a href="#" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Instagram className="w-4 h-4" /></a>
+              <a href="https://github.com/dagimabyot/cineverse" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Github className="w-4 h-4" /></a>
+              <a href="https://www.linkedin.com/feed/" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><Linkedin className="w-4 h-4" /></a>
+              <a href="https://t.me/dagiabyot" target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center text-gray-400 hover:text-violet-400 hover:bg-gray-700 transition-colors"><MessageCircle className="w-4 h-4" /></a>
             </div>
             <p className="text-gray-600 text-xs">© {new Date().getFullYear()} CineVerse. All rights reserved.</p>
           </div>

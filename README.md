@@ -1,39 +1,32 @@
-**Welcome to your Base44 project** 
+# CineVerse
 
-**About**
+Your ultimate destination for discovering movies, tracking favorites, and exploring cinema.
 
-View and Edit  your app on [Base44.com](http://Base44.com) 
+## About CineVerse
 
-This project contains everything you need to run your app locally.
+CineVerse is a modern movie discovery platform that helps you find, rate, and keep track of movies you love. Explore a vast collection of films, create watchlists, mark your favorites, and engage with a community of cinema enthusiasts.
 
-**Edit the code in your local development environment**
+## Features
 
-Any change pushed to the repo will also be reflected in the Base44 Builder.
+- **Movie Discovery**: Browse and search through thousands of movies
+- **Ratings & Reviews**: See ratings, read reviews, and share your thoughts
+- **Watchlist**: Keep track of movies you want to watch
+- **Favorites**: Mark and organize your favorite films
+- **User Profiles**: Create your own profile and manage your preferences
+- **Content Safety**: Family-safe content filtering and recommendations
 
-**Prerequisites:** 
+## Contributing
 
-1. Clone the repository using the project's Git URL 
-2. Navigate to the project directory
-3. Install dependencies: `npm install`
-4. Create an `.env.local` file and set the right environment variables
+We welcome contributions! Feel free to submit issues and enhancement requests.
 
-```
-VITE_BASE44_APP_ID=your_app_id
-VITE_BASE44_APP_BASE_URL=your_backend_url
+## Support
 
-e.g.
-VITE_BASE44_APP_ID=cbef744a8545c389ef439ea6
-VITE_BASE44_APP_BASE_URL=https://my-to-do-list-81bfaad7.base44.app
-```
+For support, visit our GitHub repository or contact us through our social channels.
 
-Run the app: `npm run dev`
+## License
 
-**Publish your changes**
+© 2025 CineVerse. All rights reserved.
 
-Open [Base44.com](http://Base44.com) and click on Publish.
+---
 
-**Docs & Support**
-
-Documentation: [https://docs.base44.com/Integrations/Using-GitHub](https://docs.base44.com/Integrations/Using-GitHub)
-
-Support: [https://app.base44.com/support](https://app.base44.com/support)
+Powered by [The Movie Database (TMDB)](https://www.themoviedb.org)
