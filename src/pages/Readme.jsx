@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, Download, Key, Settings, Play, Heart, Bookmark, Star, Search, Globe, Shield, Film, ChevronRight, Terminal, Package, Zap } from 'lucide-react';
+import { BookOpen, Play, Heart, Bookmark, Star, Search, Globe, Shield, Film, ChevronRight, Package, Zap } from 'lucide-react';
 
 const Section = ({ id, icon: Icon, title, children }) => (
   <section id={id} className="mb-14">
@@ -43,9 +43,6 @@ export default function ReadmePage() {
   const toc = [
     { id: 'overview', label: 'Overview' },
     { id: 'features', label: 'Features' },
-    { id: 'requirements', label: 'Requirements' },
-    { id: 'installation', label: 'Installation' },
-    { id: 'configuration', label: 'Configuration' },
     { id: 'usage', label: 'Usage Guide' },
     { id: 'tech', label: 'Tech Stack' },
     { id: 'content-policy', label: 'Content Policy' },
@@ -126,102 +123,7 @@ export default function ReadmePage() {
               </div>
             </Section>
 
-            {/* Requirements */}
-            <Section id="requirements" icon={Package} title="Requirements">
-              <div className="bg-gray-900 border border-gray-800 rounded-2xl p-5 mb-4">
-                <ul className="space-y-2 text-sm text-gray-300">
-                  {[
-                    ['Node.js', 'v18 or higher'],
-                    ['npm', 'v9 or higher (comes with Node.js)'],
-                    ['TMDB API Key', 'Free account at themoviedb.org'],
-                    ['Modern Browser', 'Chrome, Firefox, Edge, Safari'],
-                  ].map(([name, note]) => (
-                    <li key={name} className="flex items-center gap-3">
-                      <span className="w-2 h-2 rounded-full bg-violet-400 flex-shrink-0" />
-                      <span className="text-white font-medium w-36">{name}</span>
-                      <span className="text-gray-400">{note}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </Section>
 
-            {/* Installation */}
-            <Section id="installation" icon={Download} title="Installation">
-              <Step num="1" title="Clone the Repository">
-                <p className="text-gray-400 text-sm mb-2">Clone the project to your local machine using Git:</p>
-                <CodeBlock>{`git clone https://github.com/your-username/cineverse.git
-cd cineverse`}</CodeBlock>
-              </Step>
-
-              <Step num="2" title="Install Dependencies">
-                <p className="text-gray-400 text-sm mb-2">Install all required npm packages:</p>
-                <CodeBlock>{`npm install`}</CodeBlock>
-              </Step>
-
-              <Step num="3" title="Get a TMDB API Key">
-                <p className="text-gray-400 text-sm mb-2">CineVerse uses the TMDB API for all movie data. To get your free API key:</p>
-                <ol className="list-decimal list-inside space-y-1 text-gray-400 text-sm mb-3 ml-2">
-                  <li>Go to <a href="https://www.themoviedb.org" target="_blank" rel="noopener noreferrer" className="text-violet-400 hover:underline">themoviedb.org</a> and create a free account</li>
-                  <li>Navigate to <strong className="text-white">Settings → API</strong></li>
-                  <li>Request an API key (select "Developer" for personal use)</li>
-                  <li>Copy the <strong className="text-white">API Key (v3 auth)</strong> value</li>
-                </ol>
-              </Step>
-
-              <Step num="4" title="Configure Environment Variables">
-                <p className="text-gray-400 text-sm mb-2">Create a <code className="text-violet-300 bg-gray-800 px-1.5 py-0.5 rounded">.env</code> file in the project root:</p>
-                <CodeBlock>{`VITE_TMDB_API_KEY=your_api_key_here`}</CodeBlock>
-                <p className="text-gray-500 text-xs">The API key is already pre-configured in the app — this step is only needed if you fork the project.</p>
-              </Step>
-
-              <Step num="5" title="Start the Development Server">
-                <p className="text-gray-400 text-sm mb-2">Run the app locally:</p>
-                <CodeBlock>{`npm run dev`}</CodeBlock>
-                <p className="text-gray-400 text-sm">The app will be available at <code className="text-violet-300 bg-gray-800 px-1.5 py-0.5 rounded">http://localhost:5173</code></p>
-              </Step>
-
-              <Step num="6" title="Build for Production">
-                <p className="text-gray-400 text-sm mb-2">To create a production build:</p>
-                <CodeBlock>{`npm run build
-npm run preview   # preview the production build locally`}</CodeBlock>
-              </Step>
-            </Section>
-
-            {/* Configuration */}
-            <Section id="configuration" icon={Settings} title="Configuration">
-              <div className="space-y-4 text-sm text-gray-300">
-                <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-                  <h4 className="text-white font-semibold mb-3 flex items-center gap-2"><Terminal className="w-4 h-4 text-violet-400" /> Project Structure</h4>
-                  <CodeBlock>{`cineverse/
-├── src/
-│   ├── pages/          # Page components (Home, Movie, Search, etc.)
-│   ├── components/     # Reusable UI components
-│   │   ├── layout/     # Navbar, Footer
-│   │   ├── movies/     # MovieCard, MovieGrid, TrailerModal, etc.
-│   │   └── ui/         # shadcn/ui base components
-│   ├── entities/       # Data entity schemas
-│   ├── lib/            # Utilities, auth context, query client
-│   ├── api/            # Base44 SDK client
-│   ├── App.jsx         # Router and app shell
-│   ├── main.jsx        # Entry point
-│   └── index.css       # Global styles & Tailwind tokens
-├── index.html
-├── tailwind.config.js
-└── package.json`}</CodeBlock>
-                </div>
-
-                <div className="bg-gray-900 border border-gray-800 rounded-xl p-5">
-                  <h4 className="text-white font-semibold mb-3">Content Filtering</h4>
-                  <p className="text-gray-400 leading-relaxed">
-                    Content filtering is managed in <code className="text-violet-300 bg-gray-800 px-1.5 py-0.5 rounded">components/tmdb.js</code>. 
-                    Blocked genres (Romance <code className="text-violet-300 bg-gray-800 px-1.5 py-0.5 rounded">10749</code>, Adult <code className="text-violet-300 bg-gray-800 px-1.5 py-0.5 rounded">10768</code>) 
-                    are excluded from all API calls via the <code className="text-violet-300 bg-gray-800 px-1.5 py-0.5 rounded">without_genres</code> parameter, 
-                    and results are additionally filtered client-side using keyword matching.
-                  </p>
-                </div>
-              </div>
-            </Section>
 
             {/* Usage */}
             <Section id="usage" icon={Play} title="Usage Guide">
