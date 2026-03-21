@@ -9,6 +9,7 @@ import WatchlistFavButton from '../components/movies/WatchlistFavB';
 import ReviewSection from '../components/movies/ReviewSection';
 import { base44 } from '@/api/base44Client';
 
+// Fixed import for WatchlistFavB component
 export default function MoviePage() {
   const { id } = useParams();
   const [movie, setMovie] = useState(null);
