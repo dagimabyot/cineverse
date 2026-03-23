@@ -25,7 +25,7 @@ For support, visit our GitHub repository or contact us through our social channe
 
 ## License
 
-© 2025 CineVerse. All rights reserved.
+© 2026 CineVerse. All rights reserved.
 
 ---
 
